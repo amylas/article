@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+  <title>懂球帝</title>
+</head>
+<body>
+<div id="app">
+</div>
+
+<script type="text/javascript">
+  var pageParams = {
+    'con': [],
+    'imgArr': null
+  };
+  var vueData = null;
+  function connectWebViewJavascriptBridge(callback) {
+    if (window.WebViewJavascriptBridge) {
+      callback(WebViewJavascriptBridge);
+    } else {
+      document.addEventListener('WebViewJavascriptBridgeReady', function () {
+        callback(WebViewJavascriptBridge);
+      }, false)
+    }
+  }
+</script>
+<!--feed-->
+</body>
+</html>
